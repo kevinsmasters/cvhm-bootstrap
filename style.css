@@ -1,0 +1,113 @@
+/*
+    Theme Name: CVHM Bootstrap
+    Theme URI: https://crossvalleyhealth.com
+    Description: Cross Valley Health Bootstrap Theme
+    Author: Kevin Masters
+    Author URI: https://kevinmasters.com
+    Template: wp-bootstrap-starter
+    Version: 1.0.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: bootstrap, responsive
+    Text Domain: cvhm-bootstrap
+*/
+
+/* header styles */
+header#masthead {
+  background-color: #11406a;
+}
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover {
+  font-weight: bold;
+}
+header#masthead #menu-main-menu {
+  margin-top: 10px;
+}
+header#masthead #navs {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* dropdown nav links on hover */
+.navbar-nav > li:hover > .dropdown-menu {
+    display: block;
+    top: 30px;
+}
+.navbar-nav li > .dropdown-menu li:hover .dropdown-menu {
+    left: 190px;
+    top: 0;
+    width: 200px !important;
+    display: block;
+}
+
+body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
+  text-transform: none;
+  padding: 28px 1.3rem 0;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #cbcdcc;
+}
+#header-nav .navbar-nav > li.lang-item > a {
+  background-image: url(./assets/images/espan-icon.png);
+}
+#header-nav .navbar-nav > li.nav-pay > a {
+  background-image: url(./assets/images/pay-icon.png);
+}
+#header-nav .navbar-nav > li.nav-portal > a {
+  background-image: url(./assets/images/portal-icon.png);
+}
+#header-nav .navbar-nav > li.nav-form > a {
+  background-image: url(./assets/images/form-icon.png);
+}
+
+/* Frequently Asked Questions */
+.ufaq-faq-div {
+  border: 1px solid blue;
+}
+div.ufaq-faq-title div.ewd-ufaq-post-margin-symbol {
+  margin-left: 15px;
+  margin-top: 6px;
+  border: 1px solid blue;
+  border-radius: 34px;
+  padding: 6px 5px 3px;
+}
+.ufaq-faq-title .ewd-ufaq-post-margin-symbol span {
+  font-size: 15px;
+}
+.ewd-ufaq-author-date,
+.ufaq-faq-categories {
+  display: none;
+}
+
+/* footer styles */
+body:not(.theme-preset-active) footer#colophon {
+  background-color: #11406a;
+}
+footer .site-info img {
+  display: block;
+  margin: 0 auto;
+}
+#footer-widget .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#footer-widget .widget-col {
+  width: 200px;
+}
+#footer-widget .widget-col.at-140 {
+  width: 140px;
+}
+#footer-widget .widget-col.at-170 {
+  width: 170px;
+}
+#footer-widget .widget-col.at-180 {
+  width: 180px;
+}
