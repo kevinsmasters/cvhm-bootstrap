@@ -12,6 +12,12 @@
     Text Domain: cvhm-bootstrap
 */
 
+/* General Styles */
+body,
+h1, h2, h3, h4, h5, h6 {
+  color: #202f3c;
+}
+
 /* header styles */
 header#masthead {
   background-color: #11406a;
@@ -67,6 +73,36 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   background-image: url(./assets/images/form-icon.png);
 }
 
+/* Home */
+.home #content {
+  padding-top: 0;
+}
+
+.home .entry-content {
+  margin-top: 0;
+}
+#homeHero .vce-col {
+  padding-top: 98px;
+  padding-left: 93px;
+  padding-right: 70px;
+}
+#homeHero .vce-col + .vce-col {
+  padding-left: 115px;
+  padding-right: 24px;
+}
+#homeHero .vce-col p.herotitle {
+  font-size: 1.4rem;
+  margin-bottom: .4rem;
+}
+#homeHero .vce-col h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-bottom: .1rem;
+}
+#homeHero .vce-col h2 + p {
+  font-size: 1.3rem;
+}
 /* Frequently Asked Questions */
 .ufaq-faq-div {
   border: 1px solid blue;
