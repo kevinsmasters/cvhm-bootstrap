@@ -13,9 +13,15 @@
 */
 
 /* General Styles */
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1340px;
+  }
+}
+
 body,
 h1, h2, h3, h4, h5, h6 {
-  color: #202f3c;
+  color: #11406c;
 }
 
 /* header styles */
@@ -82,26 +88,101 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   margin-top: 0;
 }
 #homeHero .vce-col {
-  padding-top: 98px;
-  padding-left: 93px;
+  padding-top: 123px;
+  padding-left: 116px;
   padding-right: 70px;
 }
 #homeHero .vce-col + .vce-col {
-  padding-left: 115px;
+  padding-left: 165px;
   padding-right: 24px;
 }
 #homeHero .vce-col p.herotitle {
   font-size: 1.4rem;
-  margin-bottom: .4rem;
+  margin-bottom: .7rem;
 }
 #homeHero .vce-col h2 {
   font-size: 2.6rem;
   font-weight: 700;
-  margin-bottom: 0;
+  margin-bottom: 1.3rem;
   padding-bottom: .1rem;
 }
 #homeHero .vce-col h2 + p {
   font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+#blueRibbon .vce-row .vce-row {
+  padding-top: 25px;
+}
+#blueRibbon h2 {
+  color: #fff;
+  font-size: 26px;
+  line-height: 38px;
+  padding-bottom: 0;
+  font-weight: 700;
+}
+#blueRibbon h2 + p {
+  font-size: 20px;
+  font-weight:700;
+}
+#blueRibbon .vce-text-block-wrapper.vce {
+  margin-bottom: 1rem;
+}
+#blueRibbonLogos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: .5rem;
+}
+#blueRibbonLogos > img {
+  margin-right: 20px;
+}
+#iconRibbonTitle {
+  padding-top: 78px;
+}
+#iconRibbonTitle h2 {
+  color: #2875b9;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 700;
+}
+#iconRibbon {
+  padding-top: 10px;
+  padding-bottom: 115px;
+}
+#iconRibbon h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #11406c;
+  margin-bottom: 17px;
+}
+#iconRibbon p {
+  font-size: 14px;
+}
+#iconRibbon .vce-row--col-gap-30>.vce-row-content>.vce-col {
+  margin-right: 45px;
+}
+#partnersHome {
+  background: #f4f4f4;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#partnersHome .vce-text-block {
+  padding-right: 20px;
+  padding-left: 50px;
+  max-width: 450px;
+}
+#partnersHome h2 {
+  font-size: 27px;
+  line-height: 36px;
+  color: #2875b9;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#partnersHome p {
+  font-size: 14px;
+}
+#partnersHome .vce-button--style-basic-container {
+  margin-left: 50px;
 }
 /* Frequently Asked Questions */
 .ufaq-faq-div {
