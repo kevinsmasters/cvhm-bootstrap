@@ -12,6 +12,21 @@
     Text Domain: cvhm-bootstrap
 */
 
+/*
+  -=-Table of Contents (CTRL+F)-=-
+  General styles
+  Header styles
+  Top Navigation styles
+  Home
+  Home hero
+  Home Blue ribbon (HIPPA and SSL logos in OG comp)
+  Home Icon ribbon (CVHM Difference, icons, 4 columns)
+  Home Practitioner CTA
+  Medical Marijuana CTA
+  Home News and Links
+
+*/
+
 /* General Styles */
 @media (min-width: 1200px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -46,6 +61,8 @@ header#masthead #navs {
   flex-direction: column;
   flex-grow: 1;
 }
+
+/* Top Navigation Styles */
 
 /* dropdown nav links on hover */
 .navbar-nav > li:hover > .dropdown-menu {
@@ -87,6 +104,8 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
 .home .entry-content {
   margin-top: 0;
 }
+
+/* Home hero */
 #homeHero .vce-col {
   padding-top: 123px;
   padding-left: 116px;
@@ -111,6 +130,17 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   margin-bottom: 3rem;
 }
 
+#homeHero button {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 18px 33px;
+}
+#homeHero button::after {
+  content: " \2192";
+}
+
+/* Home Blue Ribbon */
 #blueRibbon .vce-row .vce-row {
   padding-top: 25px;
 }
@@ -136,6 +166,8 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
 #blueRibbonLogos > img {
   margin-right: 20px;
 }
+
+/* Home Icon ribbon */
 #iconRibbonTitle {
   padding-top: 78px;
 }
@@ -161,6 +193,8 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
 #iconRibbon .vce-row--col-gap-30>.vce-row-content>.vce-col {
   margin-right: 45px;
 }
+
+/* Home Practitioner CTA */
 #partnersHome {
   background: #f4f4f4;
   padding-top: 50px;
@@ -172,18 +206,31 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   max-width: 450px;
 }
 #partnersHome h2 {
-  font-size: 27px;
-  line-height: 36px;
+  font-size: 30px;
+  line-height: 40px;
   color: #2875b9;
   text-transform: uppercase;
   font-weight: 700;
 }
 #partnersHome p {
   font-size: 14px;
+  line-height: 24px;
 }
 #partnersHome .vce-button--style-basic-container {
   margin-left: 50px;
+  margin-top: 50px;
 }
+#partnersHome .vce-button--style-basic-container button {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 5px 35px;
+}
+/* Medical Marijuana CTA */
+
+
+/* Home News and Links */
+
+
 /* Frequently Asked Questions */
 .ufaq-faq-div {
   border: 1px solid blue;
