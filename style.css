@@ -75,25 +75,40 @@ header#masthead #navs {
     width: 200px !important;
     display: block;
 }
-
+#masthead #header-nav  {
+    display: flex;
+}
+#masthead #header-nav .navbar-nav > li {
+    margin-right: 13px;
+}
+#masthead #header-nav .navbar-nav > li.spanish-link {
+    margin-right: 0;
+}
 body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   text-transform: none;
-  padding: 28px 1.3rem 0;
+  padding: 10px 20px 10px 50px;
+  background-color: #154b7a;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: 20px center;
   color: #cbcdcc;
 }
-#header-nav .navbar-nav > li.lang-item > a {
-  background-image: url(./assets/images/espan-icon.png);
+body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-link > a {
+    background-color: transparent;
 }
 #header-nav .navbar-nav > li.nav-pay > a {
-  background-image: url(./assets/images/pay-icon.png);
+  background-image: url(./assets/images/hold-icon.jpg);
 }
 #header-nav .navbar-nav > li.nav-portal > a {
-  background-image: url(./assets/images/portal-icon.png);
+  background-image: url(./assets/images/hold-icon.jpg);
 }
 #header-nav .navbar-nav > li.nav-form > a {
-  background-image: url(./assets/images/form-icon.png);
+  background-image: url(./assets/images/hold-icon.jpg);
+}
+
+#headerInfo {
+    color: #fff;
+    font-size: 12px;
+    display: flex;
 }
 
 /* Home */
@@ -131,13 +146,17 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
 }
 
 #homeHero button {
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 18px 33px;
+  padding: 18px 69px;
 }
 #homeHero button::after {
   content: " \2192";
+}
+
+#homeHero .vce-col + .vce-col button {
+    padding: 18px 41px;
 }
 
 /* Home Blue Ribbon */
@@ -191,7 +210,10 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   font-size: 14px;
 }
 #iconRibbon .vce-row--col-gap-30>.vce-row-content>.vce-col {
-  margin-right: 45px;
+  margin-right: 83px;
+}
+#iconRibbon .vce-row > .vce-row-content > .vce-col.vce-col--xl-last {
+    margin-right: 0;
 }
 
 /* Home Practitioner CTA */
@@ -223,13 +245,64 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
 #partnersHome .vce-button--style-basic-container button {
   text-transform: uppercase;
   font-weight: 700;
-  padding: 5px 35px;
+  font-size: 13px;
+  padding: 10px 36px;
 }
 /* Medical Marijuana CTA */
-
-
+#marijuanaCTA > .vce-row {
+    padding-top: 133px;
+}
+#marijuanaCTA h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: .6rem;
+}
+#marijuanaCTA h3 {
+    font-size: 26px;
+    margin-bottom: 50px;
+}
+#marijuanaCTA button {
+    margin-bottom: 138px;
+}
 /* Home News and Links */
-
+#homeNewsLinks {
+    padding-top: 75px;
+}
+#homeNewsLinks .vce-col {
+    text-align: center;
+}
+#homeNewsLinks .vce-row--col-gap-30 > .vce-row-content > .vce-col {
+    margin-right: 15px;
+}
+#homeNewsLinks .vce-row > .vce-row-content > .vce-col.vce-col--xl-last {
+    margin-left: 15px;
+}
+#homeNewsLinks .vce-col--md-first .vce-widgets-container {
+    border-right: 1px solid #b7b8ba
+}
+#homeNewsLinks h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2774ba;
+}
+#homeNewsLinks ul {
+    list-style-type: none;
+    padding: 0;
+}
+#homeNewsLinks ul li {
+    margin-top: 46px;
+    font-size: 16px;
+}
+#homeNewsLinks ul li a {
+    color: #0f4069;
+    font-weight: 600;
+}
+#homeNewsLinks ul li:after {
+    content: " \203A";
+}
 
 /* Frequently Asked Questions */
 .ufaq-faq-div {
@@ -256,12 +329,19 @@ body:not(.theme-preset-active) footer#colophon {
 }
 footer .site-info img {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 105px;
+}
+#footer-widget {
+
 }
 #footer-widget .row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+#footer-widget .widget {
+    font-size: 12px;
+    color: #fff;
 }
 #footer-widget .widget-col {
   width: 200px;
@@ -274,4 +354,16 @@ footer .site-info img {
 }
 #footer-widget .widget-col.at-180 {
   width: 180px;
+}
+
+#footer-widget h3.widget-title {
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 0;
+}
+#footer-widget a.nav-link,
+footer#colophon #footer-widget a {
+    color: #618fb0;
+    display: inline;
+    padding: 0;
 }

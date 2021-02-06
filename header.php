@@ -57,7 +57,7 @@
                   'theme_location'    => 'header',
                   'container'       => 'div',
                   'container_id'    => 'header-nav',
-                  'container_class' => 'collapse navbar-collapse justify-content-end',
+                  'container_class' => 'justify-content-end',
                   'menu_id'         => false,
                   'menu_class'      => 'navbar-nav',
                   'depth'           => 3,
@@ -79,6 +79,10 @@
                   'walker'          => new wp_bootstrap_navwalker()
                   ));
                   ?>
+                  <div id="headerInfo" class="justify-content-end"><span id="headLocation" class="header-info">Location: 407 Gidney Avenue, Suite B, Newburgh, NY 12550</span>
+                  <span id="headPhone" class="header-info">Phone: (845) 561-7075</span>
+                  <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/header-fb-icon.jpg" alt="facebook"></a>
+                  </div>
                 </div>
             </nav>
         </div>
