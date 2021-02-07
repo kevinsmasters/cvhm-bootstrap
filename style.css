@@ -34,9 +34,13 @@
   }
 }
 
-body,
+body {
+    color: #11406c;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  color: #11406c;
+  color: #2675ba;
+  font-weight: 700;
 }
 
 /* header styles */
@@ -145,13 +149,14 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 }
 #homeHero .vce-col h2 {
   font-size: 2.6rem;
-  font-weight: 700;
   margin-bottom: 1.3rem;
   padding-bottom: .1rem;
+  color: #11406c;
 }
 #homeHero .vce-col h2 + p {
   font-size: 1.3rem;
   margin-bottom: 3rem;
+  font-weight: 700;
 }
 
 #homeHero button {
@@ -177,7 +182,7 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
   font-size: 26px;
   line-height: 38px;
   padding-bottom: 0;
-  font-weight: 700;
+    color: #11406c;
 }
 #blueRibbon h2 + p {
   font-size: 20px;
@@ -203,7 +208,6 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
   color: #2875b9;
   text-transform: uppercase;
   font-size: 32px;
-  font-weight: 700;
 }
 #iconRibbon {
   padding-top: 10px;
@@ -211,7 +215,6 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 }
 #iconRibbon h3 {
   font-size: 18px;
-  font-weight: 700;
   color: #11406c;
   margin-bottom: 17px;
 }
@@ -241,7 +244,6 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
   line-height: 40px;
   color: #2875b9;
   text-transform: uppercase;
-  font-weight: 700;
 }
 #partnersHome p {
   font-size: 14px;
@@ -265,15 +267,16 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
     color: #fff;
     text-transform: uppercase;
     font-size: 36px;
-    font-weight: 700;
     margin-bottom: .6rem;
 }
 #marijuanaCTA h3 {
     font-size: 26px;
     margin-bottom: 50px;
+      color: #11406c;
 }
 #marijuanaCTA button {
     margin-bottom: 138px;
+    font-weight: 700;
 }
 /* Home News and Links */
 #homeNewsLinks {
@@ -313,16 +316,43 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
     content: " \203A";
 }
 
+/* Pages */
+
+h1.entry-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 33px;
+    border: none;
+    margin-bottom: 75px;
+}
+body:not(.home) .entry-content {
+    max-width: 1140px;
+    margin: 0 auto;
+}
 /* Frequently Asked Questions */
+.ufaq-faq-list {
+    max-width: 916px;
+    margin: 0 auto;
+}
+.ufaq-faq-category-title {
+    margin-bottom: 20px;
+}
 .ufaq-faq-div {
-  border: 1px solid blue;
+  border: 1px solid #b7b7b7;
+  padding: 4px 0 5px;
+  margin-bottom: 10px;
 }
 div.ufaq-faq-title div.ewd-ufaq-post-margin-symbol {
   margin-left: 15px;
-  margin-top: 6px;
-  border: 1px solid blue;
+  margin-top: 2px;
+  border: 1px solid #2675ba;
   border-radius: 34px;
-  padding: 6px 5px 3px;
+  padding: 4px 4px 3px;
+}
+.ufaq-faq-title-text h4{
+    font-weight: 500;
+    font-size: 15px;
+    color: #11406c;
 }
 .ufaq-faq-title .ewd-ufaq-post-margin-symbol span {
   font-size: 15px;
@@ -340,9 +370,7 @@ footer .site-info img {
   display: block;
   margin: 0 auto 105px;
 }
-#footer-widget {
 
-}
 #footer-widget .row {
   display: flex;
   flex-direction: row;
@@ -380,6 +408,8 @@ footer#colophon #footer-widget a {
 @media (max-width: 768px) {
     .navbar-brand {
         width: 80px;
+        position: absolute;
+        top: 0;
     }
     .navbar-light .navbar-toggler {
         width: 50px;
@@ -388,6 +418,7 @@ footer#colophon #footer-widget a {
     }
     #main-nav {
         order: 2;
+        padding-bottom: 20px;
     }
     #menu-main-menu {
         text-align: center;
@@ -400,7 +431,14 @@ footer#colophon #footer-widget a {
         order: 1;
     }
     #headerInfo {
-        order: 3
+        order: 3;
+        display: block;
+    }
+    #headerInfo span {
+        display: block;
+    }
+    #headerSocial {
+        float: right;
     }
 
     #homeHero .vce-col,
