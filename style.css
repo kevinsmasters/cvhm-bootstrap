@@ -15,16 +15,21 @@
 /*
   -=-Table of Contents (CTRL+F)-=-
   General styles
-  Header styles
+  Header Styles
   Top Navigation styles
   Home
   Home hero
-  Home Blue ribbon (HIPPA and SSL logos in OG comp)
-  Home Icon ribbon (CVHM Difference, icons, 4 columns)
+  Home Blue Ribbon (HIPPA and SSL logos in OG comp)
+  Home Icon Ribbon (CVHM Difference, icons, 4 columns)
   Home Practitioner CTA
   Medical Marijuana CTA
   Home News and Links
-
+  Pages
+  Contact Us & Patient Portal
+  Pay Your Bill
+  Frequently Asked Questions
+  Footer Styles
+  Responsive Rules
 */
 
 /* General Styles */
@@ -43,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* header styles */
+/* Header Styles */
 header#masthead {
   background-color: #11406a;
 }
@@ -200,7 +205,7 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
   margin-right: 20px;
 }
 
-/* Home Icon ribbon */
+/* Home Icon Ribbon */
 #iconRibbonTitle {
   padding-top: 78px;
 }
@@ -402,7 +407,7 @@ div.ufaq-faq-title div.ewd-ufaq-post-margin-symbol {
   display: none;
 }
 
-/* footer styles */
+/* Footer Styles */
 body:not(.theme-preset-active) footer#colophon {
   background-color: #11406a;
 }
@@ -444,6 +449,8 @@ footer#colophon #footer-widget a {
     display: inline;
     padding: 0;
 }
+
+/* Responsive Rules */
 
 @media (max-width: 768px) {
     .navbar-brand {
