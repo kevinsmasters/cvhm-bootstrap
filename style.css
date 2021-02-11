@@ -329,6 +329,46 @@ body:not(.home) .entry-content {
     max-width: 1140px;
     margin: 0 auto;
 }
+
+/* Contact Us & Patient Portal */
+#wpcf7-f4-p20-o1,
+#wpcf7-f623-p364-o1 {
+  background-color: #458fcc;
+  padding: 25px 36px 37px 36px;
+  color: #fff;
+}
+#wpcf7-f4-p20-o1 p,
+#wpcf7-f623-p364-o1 p {
+  font-weight: bold;
+  font-size: 24px;
+}
+#wpcf7-f4-p20-o1 label,
+#wpcf7-f623-p364-o1 label {
+  display: none;
+}
+#wpcf7-f4-p20-o1 .form-control,
+#wpcf7-f623-p364-o1 .form-control {
+  border-radius: 0;
+}
+#wpcf7-f4-p20-o1 .form-group,
+#wpcf7-f623-p364-o1 .form-group {
+  margin-bottom: .5rem;
+}
+#wpcf7-f4-p20-o1 textarea,
+#wpcf7-f623-p364-o1 textarea {
+  height: 150px;
+}
+#wpcf7-f4-p20-o1 .btn-primary,
+#wpcf7-f623-p364-o1 .btn-primary {
+  background-color: #154b7a;
+}
+/* Pay Your Bill */
+button#payNow {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px 45px;
+}
 /* Frequently Asked Questions */
 .ufaq-faq-list {
     max-width: 916px;
@@ -447,5 +487,13 @@ footer#colophon #footer-widget a {
     }
     #homeHero #el-fbc72ba8[data-vce-do-apply*=margin][data-vce-do-apply*=el-fbc72ba8] {
         margin-bottom: 20px;
+    }
+    footer .site-info img {
+      margin-bottom: 20px;
+    }
+    #footer-widget .widget-col.at-140,
+    #footer-widget .widget-col.at-170,
+    #footer-widget .widget-col.at-180 {
+      width: 200px;
     }
 }
