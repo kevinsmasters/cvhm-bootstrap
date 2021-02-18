@@ -476,7 +476,31 @@ footer#colophon #footer-widget a {
 }
 
 /* Responsive Rules */
+@media (max-width: 1199px) {
+  .navbar-light .navbar-toggler {
+      width: 50px;
+      align-self: flex-end;
+      order: 0;
+  }
+  #main-nav {
+      order: 2;
+      padding-bottom: 20px;
+  }
+  #menu-main-menu {
+      text-align: center;
+  }
+  .navbar-light .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 
+  }
+  #masthead #header-nav {
+      order: 1;
+  }
+  #headerInfo {
+      order: 3;
+  }
+
+}
 @media (max-width: 768px) {
     .navbar-brand {
         width: 80px;
