@@ -544,6 +544,19 @@ footer#colophon #footer-widget a {
     #homeHero #el-fbc72ba8[data-vce-do-apply*=margin][data-vce-do-apply*=el-fbc72ba8] {
         margin-bottom: 20px;
     }
+    #homeNewsLinks .vce-col--md-first .vce-widgets-container {
+      border-right: none;
+    }
+    #homeNewsLinks ul li {
+      margin-top: 20px;
+    }
+    #homeNewsLinks .vce-row--col-gap-30 > .vce-row-content .vce-col,
+    #homeNewsLinks .vce-row > .vce-row-content > .vce-col.vce-col--xl-last {
+      margin: 0;
+    }
+    #homeNewsLinks ul li:after {
+      content: "";
+    }
     footer .site-info img {
       margin-bottom: 20px;
     }
