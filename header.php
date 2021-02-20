@@ -49,6 +49,16 @@
                 </div>
 
                 <div id="navs" class="justify-content-end">
+                  <div class="navbar-brand">
+                      <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
+                          <a href="<?php echo esc_url( home_url( '/' )); ?>">
+                              <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                          </a>
+                      <?php else : ?>
+                          <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
+                      <?php endif; ?>
+
+                  </div>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                   </button>
@@ -57,7 +67,7 @@
                   'theme_location'    => 'header',
                   'container'       => 'div',
                   'container_id'    => 'header-nav',
-                  'container_class' => 'justify-content-end',
+                  'container_class' => 'top-links',
                   'menu_id'         => false,
                   'menu_class'      => 'navbar-nav',
                   'depth'           => 3,
@@ -80,7 +90,8 @@
                   ));
                   ?>
                   <div id="headerInfo" class="justify-content-end"><span id="headLocation" class="header-info">Location: 407 Gidney Avenue, Suite B, Newburgh, NY 12550</span>
-                  <span id="headPhone" class="header-info">Phone: (845) 561-7075 <a id="headerSocial" href="https://www.facebook.com/CVHMPC" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/header-fb-icon.jpg" alt="facebook"></a></span>
+                  <span id="headPhone" class="header-info">Phone: (845) 561-7075 </span>
+                  <a id="headerSocial" href="https://www.facebook.com/CVHMPC" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/header-fb-icon.jpg" alt="facebook"></a>
 
                   </div>
                 </div>

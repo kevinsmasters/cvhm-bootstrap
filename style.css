@@ -81,6 +81,8 @@ header#masthead #navs {
   margin-top: 12px;
   margin-bottom: 16px;
 }
+/* hide mobile logo */
+#navs > .navbar-brand { display: none; }
 /* Top Navigation Styles */
 
 /* dropdown nav links on hover */
@@ -96,6 +98,7 @@ header#masthead #navs {
 }
 #masthead #header-nav  {
     display: flex;
+    justify-content: flex-end;
     margin-bottom: 14px;
 }
 #masthead #header-nav .navbar-nav > li {
@@ -478,43 +481,66 @@ footer#colophon #footer-widget a {
 
 /* Responsive Rules */
 @media (max-width: 1199px) {
+  header#masthead,
+  #masthead .container-fluid {
+    padding: 0;
+  }
+  #navs .navbar-brand {
+    display: flex;
+    order: 2;
+   }
+  .navbar > .navbar-brand { display: none;}
   .navbar-light .navbar-toggler {
       width: 50px;
       align-self: flex-end;
-      order: 0;
+      order: 3;
   }
   #main-nav {
-      order: 2;
+      order: 4;
       padding-bottom: 20px;
   }
   #menu-main-menu {
       text-align: center;
+  }
+  #masthead #header-nav .navbar-nav > li {
+    margin-right: 0;
+  }
+  body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.ingles-link > a, body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-link > a {
+    padding: 10px 20px 10px 50px;
   }
   .navbar-light .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 
   }
   #masthead #header-nav {
-      order: 1;
+      order: 0;
+      justify-content: flex-start;
+  }
+  #header-nav #menu-top-links {
+    flex-direction: row;
+    align-items: center;
+    background: #568ec7;
   }
   #headerInfo {
-      order: 3;
+      order: 1;
   }
+
+  /* temp */
+  html { margin-top: 0!important;}
+  #wpadminbar { display: none!important;}
 
 }
 @media (max-width: 768px) {
+  html[lang=en-US] { margin-top: 0!important;}
+  #wpadminbar { display: none!important;}
     .navbar-brand {
         width: 80px;
-        position: absolute;
-        top: 0;
     }
     .navbar-light .navbar-toggler {
         width: 50px;
         align-self: flex-end;
-        order: 0;
     }
     #main-nav {
-        order: 2;
         padding-bottom: 20px;
     }
     #menu-main-menu {
@@ -524,18 +550,30 @@ footer#colophon #footer-widget a {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 
     }
+    body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
+      font-size: 9px;
+      font-weight: normal;
+      color: #fff;
+      background-color: transparent;
+    }
+
+    body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a,
+    body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.ingles-link > a, body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-link > a {
+      padding: 10px 20px 10px 40px;
+      background-position: 10px center;
+    }
+
     #masthead #header-nav {
-        order: 1;
+
     }
     #headerInfo {
-        order: 3;
-        display: block;
+
     }
     #headerInfo span {
-        display: block;
+
     }
     #headerSocial {
-        float: right;
+
     }
 
     #homeHero .vce-col,
