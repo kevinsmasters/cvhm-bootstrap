@@ -498,6 +498,12 @@ footer#colophon #footer-widget a {
   #masthead .container-fluid {
     padding: 0;
   }
+  body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
+    font-size: 10px;
+    font-weight: normal;
+    color: #fff;
+    background-color: transparent;
+  }
   #navs .navbar-brand {
     display: flex;
     order: 2;
@@ -534,13 +540,17 @@ footer#colophon #footer-widget a {
     text-indent: -1000em;
     margin-left: 10px;
   }
+  .navbar-light .navbar-toggler {
+    font-size: 2.25rem;
+    align-self: center;
+  }
   .navbar-light .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 
   }
   #masthead #header-nav {
       order: 0;
-      justify-content: flex-start;
+      justify-content: center;
       background: #568ec7;
       margin-bottom: 0;
   }
@@ -553,7 +563,7 @@ footer#colophon #footer-widget a {
       order: 1;
       background: #fff;
       color: #1b2732;
-      font-size: 8px;
+      font-size: 10px;
       justify-content: center;
       padding: 15px 0;
   }
@@ -584,7 +594,7 @@ footer#colophon #footer-widget a {
   #wpadminbar { display: none!important;}
 
 }
-@media (max-width: 768px) {
+@media (max-width: 812px) {
   html[lang=en-US] { margin-top: 0!important;}
   #wpadminbar { display: none!important;}
     .navbar-brand {
@@ -592,7 +602,6 @@ footer#colophon #footer-widget a {
     }
     .navbar-light .navbar-toggler {
         width: 50px;
-        align-self: flex-end;
     }
     #main-nav {
         padding-bottom: 20px;
@@ -606,9 +615,6 @@ footer#colophon #footer-widget a {
     }
     body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
       font-size: 9px;
-      font-weight: normal;
-      color: #fff;
-      background-color: transparent;
     }
 
     body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a,
@@ -624,7 +630,7 @@ footer#colophon #footer-widget a {
 
     }
     #headerInfo {
-
+      font-size: 8px;
     }
     #headerInfo span {
 
