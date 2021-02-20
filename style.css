@@ -114,6 +114,7 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   background-color: #154b7a;
   background-repeat: no-repeat;
   background-position: 20px center;
+  background-size: 19px;
   font-size: 14px;
   color: #cbcdcc;
 }
@@ -124,13 +125,13 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
     padding-right: 35px;
 }
 #header-nav .navbar-nav > li.nav-pay > a {
-  background-image: url(./assets/images/hold-icon.jpg);
+  background-image: url(./assets/images/payment.png);
 }
 #header-nav .navbar-nav > li.nav-portal > a {
-  background-image: url(./assets/images/hold-icon.jpg);
+  background-image: url(./assets/images/patient.png);
 }
 #header-nav .navbar-nav > li.nav-form > a {
-  background-image: url(./assets/images/hold-icon.jpg);
+  background-image: url(./assets/images/forms.png);
 }
 #main-nav {
   margin-bottom: 10px;
