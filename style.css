@@ -150,6 +150,10 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
     display: flex;
     justify-content: flex-end;
 }
+#headPhone a {
+  text-decoration: none;
+  color: inherit;
+}
 #headPhone a#headerSocial {
   margin-left: 17px;
 }
@@ -158,9 +162,14 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
     line-height: 20px;
     padding-left: 30px;
     margin-right: 20px;
-    background-image: url(./assets/images/hold-icon.jpg);
     background-repeat: no-repeat;
     background-position: 5px center;
+}
+#headLocation {
+  background-image: url(./assets/images/hold-icon.jpg);
+}
+#headPhone {
+  background-image: url(./assets/images/hold-icon.jpg);
 }
 /* Home */
 .home #content {
@@ -492,6 +501,11 @@ footer#colophon #footer-widget a {
   #navs .navbar-brand {
     display: flex;
     order: 2;
+    justify-content: space-around;
+    align-items: center;
+   }
+   #navs .navbar-brand img {
+     width: 140px;
    }
   .navbar > .navbar-brand { display: none;}
   .navbar-light .navbar-toggler {
@@ -516,9 +530,9 @@ footer#colophon #footer-widget a {
     background-image: url(./assets/images/spanish.png);
   }
   body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.nav-fb > a {
-    background-image: url(./assets/images/header-fb-icon.jpg);
+    background-image: url(./assets/images/white-fb.png);
     text-indent: -1000em;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .navbar-light .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
@@ -534,15 +548,31 @@ footer#colophon #footer-widget a {
     flex-direction: row;
     align-items: center;
   }
+
   #headerInfo {
       order: 1;
       background: #fff;
       color: #1b2732;
-      font-size: 7px;
+      font-size: 8px;
       justify-content: center;
+      padding: 15px 0;
   }
 
-
+  .header-info {
+    padding-left: 24px;
+    background-size: 18px;
+    display: flex;
+    margin-right: 10px;
+  }
+  #headLocation {
+    background-image: url(./assets/images/noun_Location_3505551.png);
+    padding-left:14px;
+    background-position: -3px center;
+  }
+  #headPhone {
+    background-image: url(./assets/images/noun_call_2442988.png);
+    margin-right: 0;
+  }
   #header-nav .navbar-nav > li.nav-fb {
     display: flex;
   }
@@ -558,7 +588,7 @@ footer#colophon #footer-widget a {
   html[lang=en-US] { margin-top: 0!important;}
   #wpadminbar { display: none!important;}
     .navbar-brand {
-        width: 80px;
+
     }
     .navbar-light .navbar-toggler {
         width: 50px;
@@ -583,8 +613,9 @@ footer#colophon #footer-widget a {
 
     body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a,
     body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.ingles-link > a, body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-link > a {
-      padding: 10px 10px 10px 40px;
+      padding: 10px 10px 10px 35px;
       background-position: 10px center;
+      text-transform: uppercase;
     }
 
 
