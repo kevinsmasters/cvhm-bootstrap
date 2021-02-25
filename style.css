@@ -621,8 +621,11 @@ footer#colophon #footer-widget a {
     flex-direction: row;
     align-items: center;
   }
-
+#subHeader {
+  display: none;
+}
   #headerInfo {
+      display: flex;
       order: 1;
       background: #fff;
       color: #1b2732;
