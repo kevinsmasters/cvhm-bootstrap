@@ -158,32 +158,81 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 }
 
 #headerInfo {
-    color: #fff;
-    font-size: 12px;
-    line-height: 20px;
-    display: flex;
-    justify-content: flex-end;
+    display: none;
 }
-#headPhone a {
+#subHeader {
+  display: flex;
+  color: #fff;
+  background: #90c93e;
+  margin: 0 -1rem;
+  padding: 3px 0;
+  align-items: center;
+  justify-content: flex-end;
+}
+#subheaderInfo {
+      color: #fff;
+      font-size: 12px;
+      line-height: 20px;
+      display: flex;
+}
+#rt-accessibility {
+  display: flex;
+  flex-direction: row;
+}
+#rt-buttons {
+  display: flex;
+}
+#rt-accessibility #rt-buttons a {
+  color: #fff;
+}
+#rt-accessibility #rt-buttons .button {
+    line-height: 1em;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 6px;
+    border: 2px solid;
+}
+#rt-accessibility #rt-buttons .decrease .button:after {
+    content: '-';
+}
+#rt-accessibility #rt-buttons .increase .button:after {
+    content: '+';
+}
+#dateThing {
+  display: flex;
+  line-height: 15px;
+  font-size: 15px;
+}
+#subheadPhone a {
   text-decoration: none;
   color: inherit;
 }
-#headPhone a#headerSocial {
+a#headerSocial {
   margin-left: 17px;
+  margin-right: 25px;
+}
+a#headerSocial img {
+  height: 20px;
 }
 .header-info {
-    display: block;
-    line-height: 20px;
+    display: flex;
+    line-height: 15px;
+    font-size: 15px;
     padding-left: 30px;
-    margin-right: 20px;
     background-repeat: no-repeat;
-    background-position: 5px center;
+    background-position: 3px center;
+    background-size: 20px;
 }
-#headLocation {
-  background-image: url(./assets/images/hold-icon.jpg);
+#subheadLocation {
+  background-image: url(./assets/images/location-icon-white.png);
 }
-#headPhone {
-  background-image: url(./assets/images/hold-icon.jpg);
+#subheadPhone {
+  background-image: url(./assets/images/call-icon-white.png);
+  display: flex;
+  margin-left: 20px;
 }
 /* Home */
 .home #content {

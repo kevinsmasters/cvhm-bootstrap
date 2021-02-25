@@ -49,25 +49,15 @@
                 </div>
 
                 <div id="navs" class="justify-content-end">
-                  <div class="navbar-brand">
-                      <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
-                          <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                              <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-                          </a>
-                      <?php else : ?>
-                          <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
-                      <?php endif; ?>
-                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                      </button>
-                  </div>
-
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
                   <?php // TODO: MAKE SURE THIS WORKS ON MOBILE
                   wp_nav_menu(array(
                   'theme_location'    => 'header',
                   'container'       => 'div',
                   'container_id'    => 'header-nav',
-                  'container_class' => 'top-links',
+                  'container_class' => 'justify-content-end',
                   'menu_id'         => false,
                   'menu_class'      => 'navbar-nav',
                   'depth'           => 3,
@@ -89,13 +79,27 @@
                   'walker'          => new wp_bootstrap_navwalker()
                   ));
                   ?>
-                  <div id="headerInfo"><span id="headLocation" class="header-info">Location: 407 Gidney Avenue, Suite B, Newburgh, NY 12550</span>
-                  <span id="headPhone" class="header-info">Phone: <a href="tel:845-561-7075">(845) 561-7075</a> </span>
-                  <a id="headerSocial" href="https://www.facebook.com/CVHMPC" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/header-fb-icon.jpg" alt="facebook"></a>
+                  <div id="headerInfo" class="justify-content-end">
+                    <span id="headLocation" class="header-info">Location: <?php echo get_option('address_field'); ?></span>
+                    <span id="headPhone" class="header-info">Phone: <?php echo get_option('phone_field'); ?> </span>
 
                   </div>
                 </div>
             </nav>
+        </div>
+        <div id="subHeader">
+          <div id="rt-accessibility">
+			<div class="rt-desc">Text Size</div>
+			<div id="rt-buttons">
+				<a href="#" id="decreaseText" title="Decrease Font Size" class="decrease" rel="nofollow"><span class="button"></span></a>
+				<a href="#" id="increaseText" title="Increase Font Size" class="increase" rel="nofollow"><span class="button"></span></a>
+			</div>
+		</div>
+          <div id="dateThing"><?php echo date("F j, Y"); ?></div>
+          <span id="subheadLocation" class="header-info">Location: <?php echo get_option('address_field'); ?></span>
+          <span id="subheadPhone" class="header-info">Phone: <?php echo get_option('phone_field'); ?> </span>
+          <a id="headerSocial" href="https://www.facebook.com/CVHMPC" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/white-fb-icon.png" alt="facebook"></a>
+
         </div>
 	</header><!-- #masthead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
