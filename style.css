@@ -111,6 +111,20 @@ header#masthead #navs {
     margin-right: 0;
     display: none;
 }
+
+html[lang=es] #masthead #header-nav .navbar-nav > li.ingles-link {
+  display: list-item;
+}
+html[lang=en] #masthead #header-nav .navbar-nav > li.ingles-link {
+  display: none;
+}
+html[lang=es] #masthead #header-nav .navbar-nav > li.spanish-link {
+  display: none;
+}
+html[lang=en] #masthead #header-nav .navbar-nav > li.spanish-link {
+  display: list-item;
+}
+
 body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   text-transform: none;
   padding: 10px 20px 10px 50px;
