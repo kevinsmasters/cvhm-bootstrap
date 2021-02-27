@@ -29,38 +29,12 @@ function eraseCookie(name) {
 }
 
 // TEXT RESIZER //
-/*
-user clicks a text sizer button
-- button is plus: increase text size
--- text is not at maximum size
--- make text bigger
-- button is minus: decrease text size
--- text is not at minimum size
--- make text smaller
-- user navigates to another page
--- text size persists
-- user returns to the site within a given span of time
--- text size persists
 
-On page load: check for cookie, set font size accordingly
-target <html> and stepwise alter style attribute font-size by 10%, update cookie value
-
-*/
 const textResize =(dir)=> {
   const maxSize = 150;
   const minSize = 75;
   let sizeCookie = parseInt(readCookie('resizer'));
   let rootTag = document.getElementsByTagName("HTML")[0];
-
-  // if(dir == "up") {
-  //   let initSize = 125;
-  //   let newSize = sizeCookie + 25;
-  //   let sizeDiff = sizeCookie < maxSize;
-  // } else {
-  //   let initSize = 75;
-  //   let newSize = sizeCookie - 25;
-  //   let sizeDiff = sizeCookie > minSize;
-  // }
 
   let test = (dir == "up");
 
@@ -84,31 +58,6 @@ const textResize =(dir)=> {
     sizeResizer(75, sizeCookie - 25, sizeCookie > minSize);
   }
 
-
-  // if(dir == "up") {
-  //   if(!sizeCookie){
-  //     createCookie("resizer",125,30);
-  //     rootTag.style.fontSize = '120%';
-  //   } else {
-  //     if(sizeCookie < maxSize) {
-  //       let newSize = sizeCookie + 25;
-  //       createCookie("resizer", newSize, 30);
-  //       rootTag.style.fontSize = newSize +"%"
-  //     }
-  //   }
-  //
-  // } else {
-  //   if(!sizeCookie){
-  //     createCookie("resizer",75,30);
-  //     rootTag.style.fontSize = '75%';
-  //   } else {
-  //     if(sizeCookie > minSize) {
-  //       let newSize = sizeCookie - 25;
-  //       createCookie("resizer", newSize, 30);
-  //       rootTag.style.fontSize = newSize +"%";
-  //     }
-  //   }
-  // }
 }
 
 jQuery(function($) {
