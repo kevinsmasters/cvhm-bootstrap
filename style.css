@@ -66,7 +66,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a
   font-weight: bold;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 header#masthead #menu-main-menu {
@@ -99,7 +99,7 @@ header#masthead #navs {
 #masthead #header-nav  {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 14px;
+    margin-bottom: 25px;
 }
 #masthead #header-nav .navbar-nav > li {
     margin-right: 13px;
@@ -111,6 +111,20 @@ header#masthead #navs {
     margin-right: 0;
     display: none;
 }
+
+html[lang=es] #masthead #header-nav .navbar-nav > li.ingles-link {
+  display: list-item;
+}
+html[lang=en] #masthead #header-nav .navbar-nav > li.ingles-link {
+  display: none;
+}
+html[lang=es] #masthead #header-nav .navbar-nav > li.spanish-link {
+  display: none;
+}
+html[lang=en] #masthead #header-nav .navbar-nav > li.spanish-link {
+  display: list-item;
+}
+
 body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   text-transform: none;
   padding: 10px 20px 10px 50px;
@@ -118,7 +132,7 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   background-repeat: no-repeat;
   background-position: 20px center;
   background-size: 19px;
-  font-size: 14px;
+  font-size: .9rem;
   color: #cbcdcc;
 }
 body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.ingles-link > a,
@@ -144,32 +158,87 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 }
 
 #headerInfo {
-    color: #fff;
-    font-size: 12px;
-    line-height: 20px;
-    display: flex;
-    justify-content: flex-end;
+    display: none;
 }
-#headPhone a {
+#subHeader {
+  display: flex;
+  color: #fff;
+  background: #90c93e;
+  margin: 0 -1rem;
+  padding: 3px 0;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#subheaderInfo {
+      color: #fff;
+      font-size: .95rem;
+      line-height: 20px;
+      display: flex;
+}
+#rt-accessibility {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+.rt-desc {
+  margin-right: 5px;
+}
+#rt-buttons {
+  display: flex;
+  align-items: center;
+}
+#rt-accessibility #rt-buttons a {
+  color: #fff;
+}
+#rt-accessibility #rt-buttons .button {
+    line-height: 1em;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    display: block;
+    margin: auto 2px;
+}
+#rt-accessibility #rt-buttons .decrease .button {
+  line-height: .9em;
+}
+#rt-accessibility #rt-buttons .decrease .button:after {
+    content: '-';
+}
+#rt-accessibility #rt-buttons .increase .button:after {
+    content: '+';
+}
+#dateThing {
+  display: flex;
+  line-height: 15px;
+  font-size: .95rem;
+}
+#subheadPhone a {
   text-decoration: none;
   color: inherit;
 }
-#headPhone a#headerSocial {
-  margin-left: 17px;
+a#headerSocial {
+}
+a#headerSocial img {
+  height: 20px;
 }
 .header-info {
-    display: block;
-    line-height: 20px;
+    display: flex;
+    line-height: 15px;
+    font-size: .95rem;
     padding-left: 30px;
-    margin-right: 20px;
     background-repeat: no-repeat;
-    background-position: 5px center;
+    background-position: 3px center;
+    background-size: 20px;
 }
-#headLocation {
-  background-image: url(./assets/images/hold-icon.jpg);
+#subheadLocation {
+  background-image: url(./assets/images/location-icon-white.png);
 }
-#headPhone {
-  background-image: url(./assets/images/hold-icon.jpg);
+#subheadPhone {
+  background-image: url(./assets/images/call-icon-white.png);
 }
 /* Home */
 .home #content {
@@ -207,7 +276,7 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 }
 
 #homeHero button {
-  font-size: 15px;
+  font-size: .95rem;
   font-weight: 700;
   text-transform: uppercase;
   padding: 18px 69px;
@@ -226,13 +295,13 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 }
 #blueRibbon h2 {
   color: #fff;
-  font-size: 26px;
-  line-height: 38px;
+  font-size: 1.65rem;
+  line-height: 2.25rem;
   padding-bottom: 0;
     color: #11406c;
 }
 #blueRibbon h2 + p {
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight:700;
 }
 #blueRibbon .vce-text-block-wrapper.vce {
@@ -254,19 +323,19 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 #iconRibbonTitle h2 {
   color: #2875b9;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 2rem;
 }
 #iconRibbon {
   padding-top: 10px;
   padding-bottom: 115px;
 }
 #iconRibbon h3 {
-  font-size: 18px;
+  font-size: 1.05rem;
   color: #11406c;
   margin-bottom: 17px;
 }
 #iconRibbon p {
-  font-size: 14px;
+  font-size: .9rem;
 }
 #iconRibbon .vce-row--col-gap-30>.vce-row-content>.vce-col {
   margin-right: 83px;
@@ -287,14 +356,14 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
   max-width: 450px;
 }
 #partnersHome h2 {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 1.9rem;
+  line-height: 2.42rem;
   color: #2875b9;
   text-transform: uppercase;
 }
 #partnersHome p {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: .9rem;
+  line-height: 1.55rem;
 }
 #partnersHome .vce-button--style-basic-container {
   margin-left: 50px;
@@ -303,7 +372,7 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 #partnersHome .vce-button--style-basic-container button {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 13px;
+  font-size: .85rem;
   padding: 10px 36px;
 }
 /* Medical Marijuana CTA */
@@ -313,11 +382,11 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 #marijuanaCTA h2 {
     color: #fff;
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 2.3rem;
     margin-bottom: .6rem;
 }
 #marijuanaCTA h3 {
-    font-size: 26px;
+    font-size: 1.65rem;
     margin-bottom: 50px;
       color: #11406c;
 }
@@ -332,17 +401,16 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 #homeNewsLinks .vce-col {
     text-align: center;
 }
-#homeNewsLinks .vce-row--col-gap-30 > .vce-row-content > .vce-col {
-    margin-right: 15px;
-}
 #homeNewsLinks .vce-row > .vce-row-content > .vce-col.vce-col--xl-last {
     margin-left: 15px;
 }
-#homeNewsLinks .vce-col--md-first .vce-widgets-container {
-    border-right: 1px solid #b7b8ba
+#homeNewsLinks .vce-row--col-gap-30 > .vce-row-content > .vce-col.vce-col--md-first {
+    border-right: 1px solid #b7b8ba;
+    margin-right: 0!important;
+    padding-right: 15px;
 }
 #homeNewsLinks h3 {
-    font-size: 30px;
+    font-size: 1.89rem;
     font-weight: 600;
     text-transform: uppercase;
     color: #2774ba;
@@ -353,7 +421,7 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 }
 #homeNewsLinks ul li {
     margin-top: 46px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 #homeNewsLinks ul li a {
     color: #0f4069;
@@ -368,7 +436,7 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 h1.entry-title {
     text-align: center;
     text-transform: uppercase;
-    font-size: 33px;
+    font-size: 2.1rem;
     border: none;
     margin-bottom: 75px;
 }
@@ -379,34 +447,41 @@ body:not(.home) .entry-content {
 
 /* Contact Us & Patient Portal */
 #wpcf7-f4-p20-o1,
-#wpcf7-f623-p364-o1 {
+#wpcf7-f623-p364-o1,
+#wpcf7-f623-p336-o1 {
   background-color: #458fcc;
   padding: 25px 36px 37px 36px;
   color: #fff;
 }
 #wpcf7-f4-p20-o1 p,
-#wpcf7-f623-p364-o1 p {
+#wpcf7-f623-p364-o1 p,
+#wpcf7-f623-p336-o1 p {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 #wpcf7-f4-p20-o1 label,
-#wpcf7-f623-p364-o1 label {
+#wpcf7-f623-p364-o1 label,
+#wpcf7-f623-p336-o1 label {
   display: none;
 }
 #wpcf7-f4-p20-o1 .form-control,
-#wpcf7-f623-p364-o1 .form-control {
+#wpcf7-f623-p364-o1 .form-control,
+#wpcf7-f623-p336-o1 .form-control {
   border-radius: 0;
 }
 #wpcf7-f4-p20-o1 .form-group,
-#wpcf7-f623-p364-o1 .form-group {
+#wpcf7-f623-p364-o1 .form-group,
+#wpcf7-f623-p336-o1 .form-group {
   margin-bottom: .5rem;
 }
 #wpcf7-f4-p20-o1 textarea,
-#wpcf7-f623-p364-o1 textarea {
+#wpcf7-f623-p364-o1 textarea,
+#wpcf7-f623-p336-o1 textarea {
   height: 150px;
 }
 #wpcf7-f4-p20-o1 .btn-primary,
-#wpcf7-f623-p364-o1 .btn-primary {
+#wpcf7-f623-p364-o1 .btn-primary,
+#wpcf7-f623-p336-o1 .btn-primary {
   background-color: #154b7a;
 }
 /* Pay Your Bill */
@@ -438,11 +513,11 @@ div.ufaq-faq-title div.ewd-ufaq-post-margin-symbol {
 }
 .ufaq-faq-title-text h4{
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1.1rem;
     color: #11406c;
 }
 .ufaq-faq-title .ewd-ufaq-post-margin-symbol span {
-  font-size: 15px;
+  font-size: .95rem;
 }
 .ewd-ufaq-author-date,
 .ufaq-faq-categories {
@@ -464,29 +539,22 @@ footer .site-info img {
   justify-content: space-around;
 }
 #footer-widget .widget {
-    font-size: 12px;
+    font-size: .75rem;
     color: #fff;
 }
 #footer-widget .widget-col {
-  width: 200px;
+  display: flex;
 }
-#footer-widget .widget-col.at-140 {
-  width: 140px;
+#footer-widget .footer-3 {
+  width: 33%;
 }
-#footer-widget .widget-col.at-170 {
-  width: 170px;
-}
-#footer-widget .widget-col.at-180 {
-  width: 180px;
-}
-
 #footer-widget h3.widget-title {
-    font-size: 12px;
+    font-size: .75rem;
     color: #fff;
     margin-bottom: 0;
 }
 #footer-widget a.nav-link,
-footer#colophon #footer-widget a {
+footer#colophon #footer-widget a:not(.vce-button--style-basic) {
     color: #618fb0;
     display: inline;
     padding: 0;
@@ -558,36 +626,99 @@ footer#colophon #footer-widget a {
     flex-direction: row;
     align-items: center;
   }
-
+#subHeader {
+  display: none;
+}
   #headerInfo {
+      display: flex;
       order: 1;
       background: #fff;
       color: #1b2732;
       font-size: 10px;
       justify-content: center;
       padding: 15px 0;
+      flex-flow: column;
+      align-items: center;
   }
 
   .header-info {
-    padding-left: 24px;
+    padding-left: 14px;
     background-size: 18px;
     display: flex;
     margin-right: 10px;
+    font-size:1rem;
   }
   #headLocation {
     background-image: url(./assets/images/noun_Location_3505551.png);
     padding-left:14px;
     background-position: -3px center;
+    margin-bottom: 2px;
   }
   #headPhone {
     background-image: url(./assets/images/noun_call_2442988.png);
     margin-right: 0;
+    background-position: -3px center;
   }
   #header-nav .navbar-nav > li.nav-fb {
     display: flex;
   }
   #headerSocial {
     display: none;
+  }
+  #homeHero .vce-col p.herotitle {
+    font-size: 1.6rem;
+  }
+  #homeHero .vce-col h2 {
+  font-size: 2.8rem;
+  }
+  #homeHero .vce-col h2 + p {
+    font-size: 1.5rem;
+  }
+  #homeHero button {
+    font-size: 1.1rem;
+  }
+  #blueRibbon h2 {
+    font-size: 1.9rem;
+  }
+  #blueRibbon h2 + p {
+    font-size: 1.5rem;
+  }
+  #iconRibbonTitle h2 {
+    font-size: 2.2rem;
+  }
+  #iconRibbon h3 {
+    font-size: 1.2rem;
+  }
+  #iconRibbon p {
+    font-size: 1.1rem;
+  }
+  #partnersHome h2 {
+    font-size: 2.1rem;
+  }
+  #partnersHome p {
+    font-size: 1.1rem;
+  }
+  #partnersHome .vce-button--style-basic-container button {
+    font-size: 1rem;
+  }
+  #marijuanaCTA h2 {
+    font-size: 2.5rem;
+  }
+  #marijuanaCTA h3 {
+    font-size: 1.8rem;
+  }
+  #homeNewsLinks h3 {
+    font-size: 2rem;
+  }
+  #homeNewsLinks ul li {
+    font-size: 1.2rem;
+  }
+  h1.entry-title {
+    font-size: 2.3rem;
+  }
+#footer-widget h3.widget-title,
+  #footer-widget .widget {
+    font-size: 1.2rem;
   }
   /* temp */
   html { margin-top: 0!important;}
@@ -624,16 +755,8 @@ footer#colophon #footer-widget a {
       text-transform: uppercase;
     }
 
-
-
-    #masthead #header-nav {
-
-    }
     #headerInfo {
       font-size: 8px;
-    }
-    #headerInfo span {
-
     }
 
     #homeHero .vce-col,
@@ -659,9 +782,10 @@ footer#colophon #footer-widget a {
     footer .site-info img {
       margin-bottom: 20px;
     }
-    #footer-widget .widget-col.at-140,
-    #footer-widget .widget-col.at-170,
-    #footer-widget .widget-col.at-180 {
-      width: 200px;
+    #footer-widget .row {
+      flex-direction: column;
+    }
+    #footer-widget .footer-3 {
+      width: auto;
     }
 }
