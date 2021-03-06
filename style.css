@@ -48,6 +48,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+a {
+
+  transition: all .2s ease-in-out;
+}
+a:hover {
+  color: #183367;
+}
+
 /* Header Styles */
 header#masthead {
   background-color: #11406a;
@@ -251,7 +259,7 @@ a#headerSocial img {
 
 /* Home hero */
 #homeHero .vce-col {
-  padding-top: 123px;
+  padding-top: 63px;
   padding-left: 116px;
   padding-right: 70px;
 }
@@ -327,7 +335,7 @@ a#headerSocial img {
 }
 #iconRibbon {
   padding-top: 10px;
-  padding-bottom: 115px;
+  padding-bottom: 45px;
 }
 #iconRibbon h3 {
   font-size: 1.05rem;
@@ -349,11 +357,12 @@ a#headerSocial img {
   background: #f4f4f4;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 #partnersHome .vce-text-block {
   padding-right: 20px;
   padding-left: 50px;
-  max-width: 450px;
+  max-width: 490px;
 }
 #partnersHome h2 {
   font-size: 1.9rem;
@@ -426,6 +435,10 @@ a#headerSocial img {
 #homeNewsLinks ul li a {
     color: #0f4069;
     font-weight: 600;
+    transition: all .2s ease-in-out;
+}
+#homeNewsLinks ul li a:hover {
+  color: #007bff;
 }
 #homeNewsLinks ul li:after {
     content: " \203A";
@@ -440,11 +453,28 @@ h1.entry-title {
     border: none;
     margin-bottom: 75px;
 }
-body:not(.home) .entry-content {
+.single-post h1.entry-title {
+  margin-bottom: 50px;
+}
+body:not(.home) .entry-content,
+.entry-header,
+.entry-footer {
     max-width: 1140px;
     margin: 0 auto;
 }
+.entry-meta,
+footer.entry-footer {
+  font-style: italic;
+  font-size: .9rem;
+  margin-bottom: 20px;
+}
+.entry-meta {
+color: #fff;
 
+}
+.single .byline, .group-blog .byline {
+  display: none;
+}
 /* Contact Us & Patient Portal */
 #wpcf7-f4-p20-o1,
 #wpcf7-f623-p364-o1,
@@ -483,6 +513,12 @@ body:not(.home) .entry-content {
 #wpcf7-f623-p364-o1 .btn-primary,
 #wpcf7-f623-p336-o1 .btn-primary {
   background-color: #154b7a;
+  transition: all .2s ease-in-out;
+}
+#wpcf7-f4-p20-o1 .btn-primary:hover,
+#wpcf7-f623-p364-o1 .btn-primary:hover,
+#wpcf7-f623-p336-o1 .btn-primary:hover {
+  background-color: #245f92;
 }
 /* Pay Your Bill */
 button#payNow {
@@ -530,7 +566,7 @@ body:not(.theme-preset-active) footer#colophon {
 }
 footer .site-info img {
   display: block;
-  margin: 0 auto 105px;
+  margin: 0 auto 40px;
 }
 
 #footer-widget .row {
@@ -545,19 +581,41 @@ footer .site-info img {
 #footer-widget .widget-col {
   display: flex;
 }
+
 #footer-widget .footer-3 {
   width: 33%;
 }
 #footer-widget h3.widget-title {
     font-size: .75rem;
     color: #fff;
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
 #footer-widget a.nav-link,
 footer#colophon #footer-widget a:not(.vce-button--style-basic) {
     color: #618fb0;
     display: inline;
     padding: 0;
+    transition: all .2s ease-in-out;
+}
+#footer-widget a.nav-link:hover,
+footer#colophon #footer-widget a:not(.vce-button--style-basic):hover {
+  color: #2469a7;
+  background: none;
+}
+
+#footFaq {
+  color: #fff;
+  background-color: #557cbf;
+  font-size: 16px;
+  padding: 15px 43px;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  display: inline-block;
+  transition: all .2s ease-in-out;
+}
+#footFaq:hover {
+  background-color: #2469a7;
+  text-decoration: none;
 }
 
 /* Responsive Rules */
