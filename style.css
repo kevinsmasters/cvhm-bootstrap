@@ -75,6 +75,10 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   font-size: 1rem;
+  transition: all .2s ease-in-out;
+}
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover {
+  color: #618fb0;
 }
 
 header#masthead #menu-main-menu {
@@ -142,12 +146,23 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a {
   background-size: 19px;
   font-size: .9rem;
   color: #cbcdcc;
+  transition: all .2s ease-in-out;
+}
+body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li > a:hover {
+  background-color: #0b385f;
 }
 body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.ingles-link > a,
 body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-link > a {
     background-color: transparent;
     padding-left: 35px;
     padding-right: 35px;
+    transition: all .2s ease-in-out;
+}
+body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.ingles-link > a:hover,
+body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-link > a:hover {
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
 }
 #header-nav .navbar-nav > li.nav-pay > a {
   background-image: url(./assets/images/payment.png);
@@ -171,7 +186,7 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 #subHeader {
   display: flex;
   color: #fff;
-  background: #90c93e;
+  background: #458fcc;
   margin: 0 -1rem;
   padding: 3px 0;
   align-items: center;
@@ -227,11 +242,18 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
 #subheadPhone a {
   text-decoration: none;
   color: inherit;
+  padding-left: 5px;
 }
-a#headerSocial {
+#subheadPhone a:hover {
+  color: #cbcdcc;
 }
+
 a#headerSocial img {
   height: 20px;
+  transition: all .2s ease-in-out;
+}
+#headerSocial img:hover {
+  opacity: .8;
 }
 .header-info {
     display: flex;
@@ -439,6 +461,7 @@ a#headerSocial img {
 }
 #homeNewsLinks ul li a:hover {
   color: #007bff;
+  text-decoration: none;
 }
 #homeNewsLinks ul li:after {
     content: " \203A";
@@ -601,6 +624,7 @@ footer#colophon #footer-widget a:not(.vce-button--style-basic) {
 footer#colophon #footer-widget a:not(.vce-button--style-basic):hover {
   color: #2469a7;
   background: none;
+  text-decoration: none;
 }
 
 #footFaq {
@@ -797,6 +821,10 @@ footer#colophon #footer-widget a:not(.vce-button--style-basic):hover {
     }
     #menu-main-menu {
         text-align: center;
+    }
+
+    .header-info {
+      font-size: .75rem;
     }
     .navbar-light .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")

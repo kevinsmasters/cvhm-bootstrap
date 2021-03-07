@@ -92,7 +92,7 @@
                   ?>
                   <div id="headerInfo" class="">
                     <span id="headLocation" class="header-info">Location: <?php echo get_option('address_field'); ?></span>
-                    <span id="headPhone" class="header-info">Phone: <?php echo get_option('phone_field'); ?> </span>
+                    <span id="headPhone" class="header-info">Phone: <a href="tel:845-561-7075"><?php echo get_option('phone_field'); ?></a> </span>
 
                   </div>
                 </div>
@@ -108,7 +108,7 @@
 		</div>
           <div id="dateThing"><?php echo date("F j, Y"); ?></div>
           <span id="subheadLocation" class="header-info">Location: <?php echo get_option('address_field'); ?></span>
-          <span id="subheadPhone" class="header-info">Phone: <?php echo get_option('phone_field'); ?> </span>
+          <span id="subheadPhone" class="header-info">Phone: <a href="tel:845-561-7075"><?php echo get_option('phone_field'); ?></a> </span>
           <a id="headerSocial" href="https://www.facebook.com/CVHMPC" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/white-fb-icon.png" alt="facebook"></a>
 
         </div>
