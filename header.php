@@ -63,7 +63,7 @@
 
                   </div>
 
-                  <?php // TODO: MAKE SURE THIS WORKS ON MOBILE
+                  <?php 
                   wp_nav_menu(array(
                   'theme_location'    => 'header',
                   'container'       => 'div',
@@ -92,7 +92,7 @@
                   ?>
                   <div id="headerInfo" class="">
                     <span id="headLocation" class="header-info">Location: <?php echo get_option('address_field'); ?></span>
-                    <span id="headPhone" class="header-info">Phone: <?php echo get_option('phone_field'); ?> </span>
+                    <span id="headPhone" class="header-info">Phone: <a href="tel:845-561-7075"><?php echo get_option('phone_field'); ?></a> </span>
 
                   </div>
                 </div>
@@ -108,8 +108,11 @@
 		</div>
           <div id="dateThing"><?php echo date("F j, Y"); ?></div>
           <span id="subheadLocation" class="header-info">Location: <?php echo get_option('address_field'); ?></span>
-          <span id="subheadPhone" class="header-info">Phone: <?php echo get_option('phone_field'); ?> </span>
-          <a id="headerSocial" href="https://www.facebook.com/CVHMPC" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/white-fb-icon.png" alt="facebook"></a>
+          <span id="subheadPhone" class="header-info">Phone: <a href="tel:845-561-7075"><?php echo get_option('phone_field'); ?></a> </span>
+          <div id="headerSocial">
+            <a class="social-link" href="https://www.facebook.com/CVHMPC" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/white-fb-icon.png" alt="facebook"></a>
+            <a class="social-link" href="https://www.linkedin.com/company/cross-valley-health-&-medicine-pc/mycompany/?viewAsMember=true" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/linkedin-3-64.png" alt="linkedin"></a>
+          </div>
 
         </div>
 	</header><!-- #masthead -->
