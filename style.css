@@ -54,6 +54,7 @@ a {
 }
 a:hover {
   color: #183367;
+  text-decoration: none;
 }
 
 /* Header Styles */
@@ -248,9 +249,11 @@ body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.spanish-li
   color: #cbcdcc;
 }
 
-a#headerSocial img {
+#headerSocial img {
   height: 20px;
   transition: all .2s ease-in-out;
+  position: relative;
+  top: -2px;
 }
 #headerSocial img:hover {
   opacity: .8;
@@ -271,7 +274,7 @@ a#headerSocial img {
   background-image: url(./assets/images/call-icon-white.png);
 }
 /* Home */
-.home #content {
+.home #content.site-content {
   padding-top: 0;
 }
 
@@ -468,16 +471,18 @@ a#headerSocial img {
 }
 
 /* Pages */
-
+#content.site-content {
+  padding-top: 2.3rem;
+}
 h1.entry-title {
     text-align: center;
     text-transform: uppercase;
     font-size: 2.1rem;
     border: none;
-    margin-bottom: 75px;
+    margin-bottom: 2.3rem;
 }
 .single-post h1.entry-title {
-  margin-bottom: 50px;
+  margin-bottom: 2.3rem;
 }
 body:not(.home) .entry-content,
 .entry-header,
@@ -495,53 +500,76 @@ footer.entry-footer {
 color: #fff;
 
 }
-.single .byline, .group-blog .byline {
-  display: none;
-}
+
 /* Contact Us & Patient Portal */
 #wpcf7-f4-p20-o1,
 #wpcf7-f623-p364-o1,
-#wpcf7-f623-p336-o1 {
+#wpcf7-f623-p336-o1,
+.wpcf7 {
   background-color: #458fcc;
   padding: 25px 36px 37px 36px;
   color: #fff;
 }
+#wpcf7-f4-p20-o1 {
+  padding: 12px 18px 18px;
+}
 #wpcf7-f4-p20-o1 p,
 #wpcf7-f623-p364-o1 p,
-#wpcf7-f623-p336-o1 p {
+#wpcf7-f623-p336-o1 p,
+.wpcf7 p {
   font-weight: bold;
   font-size: 1.5rem;
 }
 #wpcf7-f4-p20-o1 label,
 #wpcf7-f623-p364-o1 label,
-#wpcf7-f623-p336-o1 label {
+#wpcf7-f623-p336-o1 label,
+.wpcf7 label {
   display: none;
 }
 #wpcf7-f4-p20-o1 .form-control,
 #wpcf7-f623-p364-o1 .form-control,
-#wpcf7-f623-p336-o1 .form-control {
+#wpcf7-f623-p336-o1 .form-control,
+.wpcf7 .form-control {
   border-radius: 0;
 }
 #wpcf7-f4-p20-o1 .form-group,
 #wpcf7-f623-p364-o1 .form-group,
-#wpcf7-f623-p336-o1 .form-group {
+#wpcf7-f623-p336-o1 .form-group,
+.wpcf7 .form-group {
   margin-bottom: .5rem;
 }
 #wpcf7-f4-p20-o1 textarea,
 #wpcf7-f623-p364-o1 textarea,
-#wpcf7-f623-p336-o1 textarea {
+#wpcf7-f623-p336-o1 textarea,
+.wpcf7 textarea {
   height: 150px;
 }
 #wpcf7-f4-p20-o1 .btn-primary,
 #wpcf7-f623-p364-o1 .btn-primary,
-#wpcf7-f623-p336-o1 .btn-primary {
+#wpcf7-f623-p336-o1 .btn-primary,
+.wpcf7 .btn-primary {
   background-color: #154b7a;
   transition: all .2s ease-in-out;
 }
 #wpcf7-f4-p20-o1 .btn-primary:hover,
 #wpcf7-f623-p364-o1 .btn-primary:hover,
-#wpcf7-f623-p336-o1 .btn-primary:hover {
+#wpcf7-f623-p336-o1 .btn-primary:hover,
+.wpcf7 .btn-primary:hover {
   background-color: #245f92;
+}
+.wpcf7 .wpcf7-list-item-label {
+  display: none;
+}
+.wpcf7 .wpcf7-list-item {
+  margin-left: 0;
+}
+.wpcf7 .wpcf7-form-control.wpcf7-checkbox {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: inline;
+  height: auto;
+  width: auto;
 }
 /* Pay Your Bill */
 button#payNow {
@@ -621,6 +649,7 @@ footer#colophon #footer-widget a:not(.vce-button--style-basic) {
     transition: all .2s ease-in-out;
 }
 #footer-widget a.nav-link:hover,
+#footer-widget a.nav-link:focus,
 footer#colophon #footer-widget a:not(.vce-button--style-basic):hover {
   color: #2469a7;
   background: none;
@@ -689,6 +718,22 @@ footer#colophon #footer-widget a:not(.vce-button--style-basic):hover {
     background-image: url(./assets/images/white-fb.png);
     text-indent: -1000em;
     margin-left: 10px;
+    width: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    background-position: center;
+  }
+  body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.nav-li a:hover ,
+  body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.nav-fb a:hover {
+    background-color: transparent;
+  }
+  body:not(.theme-preset-active) #masthead #header-nav .navbar-nav > li.nav-li > a {
+    background-image: url(./assets/images/linkedin-3-64.png);
+    text-indent: -1000em;
+    width: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    background-position: center;
   }
   .navbar-light .navbar-toggler {
     font-size: 2.25rem;
